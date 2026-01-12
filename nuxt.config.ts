@@ -3,10 +3,15 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+     firebaseApiKey: process.env.FIREBASE_API_KEY,
+      }
+  },
   app: {
     // Si tu repo es https://github.com/usuario/mi-proyecto
     // Tu baseURL debe ser '/mi-proyecto/'
-    baseURL: process.env.NODE_ENV === 'production' ? '/' : '/',
+    baseURL: process.env.NODE_ENV === 'production' ? '/CPC-Nuxt4/' : '/',
     
     // Opcional pero recomendado para transiciones suaves en GH Pages
     buildAssetsDir: 'assets', 

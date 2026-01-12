@@ -2,8 +2,10 @@ import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  const config = {
-      apiKey: "AIzaSyDIS5dpFmXD6qjmH51HrQ_UMmKWtRvKKxc",
+  const config = useRuntimeConfig()
+
+  const firebaseConfig = {
+    apiKey: config.public.firebaseApiKey,
     authDomain: "transparenciaseac.firebaseapp.com",
     projectId: "transparenciaseac",
     storageBucket: "transparenciaseac.appspot.com",
@@ -12,7 +14,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   }
 
   // 1. Inicializar App
-  const app = initializeApp(config)
+  const app = initializeApp(firebaseConfig)
 
   // 2. Inicializar Firestore
   const db = getFirestore(app)
