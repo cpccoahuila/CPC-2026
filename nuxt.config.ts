@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   app: {
     // Si tu repo es https://github.com/usuario/mi-proyecto
     // Tu baseURL debe ser '/mi-proyecto/'
-    baseURL: process.env.NODE_ENV === 'production' ? '/CPC-Nuxt4/' : '/',
+    baseURL: process.env.NODE_ENV === 'production' ? '/' : '/',
     
     // Opcional pero recomendado para transiciones suaves en GH Pages
     buildAssetsDir: 'assets', 

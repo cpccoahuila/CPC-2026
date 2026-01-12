@@ -2,6 +2,8 @@
   <v-app-bar
     :color="colorNav"
     elevation="2"
+      style="position: fixed;"
+
   >
     <v-app-bar-nav-icon 
    

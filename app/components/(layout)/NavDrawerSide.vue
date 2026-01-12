@@ -3,11 +3,12 @@
   v-model="props.drawerToggle"
   :rail="rail"
   permanent
-  @click="rail = false"
+  @click="rail = rail"
   theme="dark"
   :color="colorNav"
   elevation="2"
   height="100%"
+  style="position: fixed;"
   
     >
     
@@ -15,7 +16,7 @@
       
       <v-list-item 
       class="mb-3 menu-header"
-      prepend-icon="mdi-view-quilt"
+      :prepend-icon='!rail ? "mdi-view-quilt" : "mdi-menu-close" '
       title="Menú Principal"
       subtitle="Navegación"
       @click.stop="rail = !rail"
@@ -36,6 +37,7 @@
         :value="item.title"
         rounded="lg"
         color="primary"
+        @click="toggleDrawer"
       >
         <template v-slot:prepend>
           <v-icon 
@@ -62,10 +64,17 @@ const rail = ref<boolean>(false)
 const drawer = ref<boolean>(false)
 const { mdAndUp } = useDisplay()
 const colorNav = '#383550'
+const emit = defineEmits(['toggle-drawer'])
 const props = defineProps({
   drawerToggle: Boolean
 })
 
+const toggleDrawer = () => {
+  if (!rail.value) {
+ emit('toggle-drawer')
+  }
+ 
+}
 const items = ref([
   {
     icon: 'mdi-home',
