@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - main  # O 'master', revisa cómo se llama tu rama principal
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Permiso necesario para que el bot pueda publicar
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4 # Actualizado a v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4 # Actualizado a v4
+        with:
+          node-version: 20 # Nuxt 4 funciona mejor con Node 20
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile # Más seguro para CI/CD
+
+      - name: Generate Static Site
+        run: yarn generate # Asegúrate que en package.json tengas "generate": "nuxt generate"
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./.output/public  # <--- ESTE ES EL CAMBIO CLAVE
