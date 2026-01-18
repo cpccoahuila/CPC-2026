@@ -1,72 +1,65 @@
 <template>
-<div>
-    <v-card class="pa-3"  color="#f0f0f0">
-        <v-row justify="center" >
-
-            <v-col align-self="center"  align="center"  class="pa-1" cols="1" lg="" v-for=" (i,index) in cc" :key="index">
-
-                <v-img :width="i.size - 40" 
-                :lazy-src="('/img/' + i.img)"
-                :src="('/img/' + i.img)"
-                ></v-img>
-
-            </v-col>
-        </v-row>
-
+  <div v-if="!mobile">
+    <v-card class="pa-1" color="#f0f0f0" elevation="0">
+      <v-row 
+        justify="center" 
+        align="center" 
+        :class="smAndDown ? 'ga-3' : 'ga-8'"
+        no-gutters
+      >
+        <v-col 
+          v-for="(i, index) in cc" 
+          :key="index"
+          cols="auto"
+          class="d-flex justify-center align-center pa-2" 
+        >
+          <a :href="i.web" target="_blank" rel="noopener noreferrer" class="logo-link">
+            <v-img 
+              :width="mobile ? (Number(i.size) * 0.3) : (Number(i.size) - 10)" 
+              :src="`/img/${i.img}`" 
+              :lazy-src="`/img/${i.img}`"
+              alt="Logotipo institucional"
+              class="logo-img"
+            ></v-img>
+          </a>
+        </v-col>
+      </v-row>
     </v-card>
-
-</div>
+  </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            cc: [{
-                    img: 'cc-pjecz.png',
-                    web: 'https://www.pjecz.gob.mx/',
-                    size: '180'
-                },
-                {
-                    img: 'ASEC.png',
-                    web: 'https://www.asecoahuila.gob.mx/',
-                    size: '150'
-                },
-                {
-                    img: 'cc-fehc.png',
-                    web: 'https://www.fehc.gob.mx/',
-                    size: '150'
-                },
-                {
-                    img: 'cc-sefirc.png',
-                    web: 'http://www.sefircoahuila.gob.mx/',
-                    size: '200'
-                },
+<script setup lang="ts">
+import { useDisplay } from 'vuetify'
 
-                {
-                    img: 'cc-tjacz.png',
-                    web: 'http://www.tjacoahuila.org/',
-                    size: '180'
-                },
-                {
-                    img: 'cpc.png',
-                    web: 'http://www.tjacoahuila.org/',
-                    size: '90'
-                },
-                {
-                    img: 'sea-icon.png',
-                    web: 'http://www.tjacoahuila.org/',
-                    size: '80'
-                },
-                
+// Extraemos 'mobile' de useDisplay para saber si la pantalla es pequeña
+const { mobile, smAndDown} = useDisplay()
 
-            ]
-        }
-    },
-
-}
+const cc = [
+  { img: 'ASEC.png', web: 'https://www.asecoahuila.gob.mx/', size: '160' },
+  { img: 'cc-fehc.png', web: 'https://sitio.fgecoahuila.gob.mx/', size: '145' },
+  { img: 'cc-sefirc.png', web: 'http://www.sefircoahuila.gob.mx/', size: '180' },
+  { img: 'cc-pjecz.png', web: 'https://www.pjecz.gob.mx/', size: '170' },
+  { img: 'cc-tjacz.png', web: 'http://www.tjacoahuila.org/', size: '130' },
+  { img: 'cpc-color.png', web: 'https://www.cpccoahuila.org.mx/', size: '130' },
+  { img: 'seac.png', web: '#', size: '110' }
+];
 </script>
 
 <style lang="scss" scoped>
+.logo-link {
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s ease-in-out;
 
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+  }
+}
+
+.logo-img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.05));
+}
 </style>

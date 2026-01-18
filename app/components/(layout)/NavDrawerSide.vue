@@ -15,9 +15,10 @@
     <v-list nav>
       
       <v-list-item 
+      v-if="mdAndUp"
       class="mb-3 menu-header"
       :prepend-icon='!rail ? "mdi-view-quilt" : "mdi-menu-close" '
-      title="Menú Principal"
+      title="Minimizar Menú"
       subtitle="Navegación"
       @click.stop="rail = !rail"
       rounded="xl"
@@ -62,7 +63,7 @@ import { useDisplay } from 'vuetify'
 
 const rail = ref<boolean>(false)
 const drawer = ref<boolean>(false)
-const { mdAndUp } = useDisplay()
+const {  mdAndUp } = useDisplay()
 const colorNav = '#383550'
 const emit = defineEmits(['toggle-drawer'])
 const props = defineProps({
