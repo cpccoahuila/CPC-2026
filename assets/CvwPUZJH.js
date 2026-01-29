@@ -1,0 +1,1 @@
+import{o as t,at as s,s as e,$ as n}from"./4OVaFFof.js";function i(){const o=e(!1);return t(()=>{window.requestAnimationFrame(()=>{o.value=!0})}),{ssrBootStyles:n(()=>o.value?void 0:{transition:"none !important"}),isBooted:s(o)}}export{i as u};
