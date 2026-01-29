@@ -175,6 +175,11 @@ const sesiones = [
         nombre: 'Sesión Extraordinaria',
         ordenDelDia: '/sesiones'
       },
+       {
+        link: 'https://youtu.be/uW_GIUDTo60',
+        nombre: 'Primera Sesión Ordinaria',
+        ordenDelDia: '/sesiones'
+      },
       {
         link: 'https://youtu.be/mx-jaOLYvoE',
         nombre: 'Séptima Sesión Ordinaria',
