@@ -63,6 +63,11 @@ import { TitlePages } from '../../../.nuxt/components';
                                         <a
                                             href="mailto:diana.flores@cpccoahuila.org.mx">diana.flores@cpccoahuila.org.mx</a>
                                     </div>
+                                    <div class="media-body align-self-end">
+                                        <h5 class="mt-0">José Ignacio Carrillo Aguirre</h5>
+                                        <a
+                                            href="mailto:ignacio.carillo@cpccoahuila.org.mx">ignacio.carillo@cpccoahuila.org.mx</a>
+                                    </div>
                                 </div>
 
                             </v-col>

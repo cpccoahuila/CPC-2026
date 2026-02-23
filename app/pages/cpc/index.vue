@@ -166,6 +166,13 @@ const integrantes = [
         foto: 'cpc-dmfr.png',
         img: 'cc-cpc.png',
         mail: 'diana.flores@cpccoahuila.org.mx'
+    },
+     {
+        nombre: 'José Ignacio Carrillo Aguirre',
+        cargo: 'Consejero',
+        foto: 'cpc-jica.png',
+        img: 'cc-cpc.png',
+        mail: 'ignacio.carrillo@cpccoahuila.org.mx'
     }
 ];
 
