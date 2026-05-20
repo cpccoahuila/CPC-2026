@@ -66,11 +66,21 @@ const page = {
 
 const comunicados = [
   {
+    titulo: "Pronunciamiento del Consejo de Participación Ciudadana",
+    texto: "Pronunciamiento del Consejo de Participación Ciudadana.",
+    link: "Ver comunicado",
+    documento: "/Pronunciamiento.pdf"
+  },
+
+
+  {
     titulo: "Proyecto de Investigación: Educación y Sociedad",
     texto: "Educación y Sociedad con integridad, ética y valores.",
     link: "Ver comunicado",
     documento: "/Proyecto de Investigacion.pdf"
   },
+  
+  
   {
     titulo: "Boletín CPC 10",
     texto: "Boletín informativo correspondiente al periodo CPC/10/2023-24",
