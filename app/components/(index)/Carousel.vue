@@ -145,10 +145,7 @@ export default {
                 //    to: "https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2FQjXLjUOpI86yFY7FTrPn%2FCOMISIONES%20SECTORIALES%20ROSA.pdf?alt=media&token=75f022f7-3b59-4367-b810-cd53e00f5750"
                 //},
 
-                 {
-                    src: "https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2FGtaPvRPfu8Kt2ycffOHw%2FBanners%20p%C3%A1gina%20web%20(12).png?alt=media&token=58896c00-c693-4992-92cf-584acd3ec141",
-                    to: "https://www.comisionseacoahuila.mx/procesos/2025/"
-                },
+                
 
                 // {
                 //     src:"https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2FQjXLjUOpI86yFY7FTrPn%2FBanners%20p%C3%A1gina%20web%20(11).png?alt=media&token=dd501d5d-4464-42ff-930a-81fce49eb347",

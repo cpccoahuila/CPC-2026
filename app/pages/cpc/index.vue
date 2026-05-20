@@ -6,23 +6,7 @@
             <v-col cols="12">
                 <v-divider class="mb-6"></v-divider>
 
-                <v-card class="mt-5 pa-6 pa-md-10" elevation="2" rounded="lg" color="article">
-
-                    <v-row v-for="(e, index) in page.presentacion" :key="index" class="mb-6">
-                        <v-col cols="12">
-                            <div class="text-h4 text-md-h3 text-center font-weight-bold mb-4"
-                                :style="{ color: page.color }">
-                                {{ e.titulo }}
-                            </div>
-                            <p class="text-body-1 text-justify px-md-12">
-                                {{ e.texto }}
-                            </p>
-                            <v-divider v-if="index < page.presentacion.length - 1" class="mt-8"></v-divider>
-                        </v-col>
-                    </v-row>
-                </v-card>
-
-                <v-card class="mt-10 pa-6" elevation="0" color="article">
+                 <v-card class="mt-10 pa-6" elevation="0" color="article">
                     <div class="text-h4 text-center mb-8 font-weight-light">Miembros que integran el CPC</div>
 
                     <v-row>
@@ -77,6 +61,24 @@
                         </v-col>
                     </v-row>
                 </v-card>
+
+                <v-card class="mt-5 pa-6 pa-md-10" elevation="2" rounded="lg" color="article">
+
+                    <v-row v-for="(e, index) in page.presentacion" :key="index" class="mb-6">
+                        <v-col cols="12">
+                            <div class="text-h4 text-md-h3 text-center font-weight-bold mb-4"
+                                :style="{ color: page.color }">
+                                {{ e.titulo }}
+                            </div>
+                            <p class="text-body-1 text-justify px-md-12">
+                                {{ e.texto }}
+                            </p>
+                            <v-divider v-if="index < page.presentacion.length - 1" class="mt-8"></v-divider>
+                        </v-col>
+                    </v-row>
+                </v-card>
+
+               
 
                 <v-card class="mt-10 pa-6 pa-md-10" border elevation="1">
                     <div class="text-h4 text-center mb-10 font-weight-bold">Valores</div>
