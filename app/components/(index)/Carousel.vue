@@ -152,6 +152,11 @@ export default {
                 //     to:"/"
 
                 // },
+                {
+                     src:"https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2FGtaPvRPfu8Kt2ycffOHw%2FWhatsApp%20Image%202026-06-24%20at%2012.19.52.jpeg?alt=media&token=b0cd5dc0-748d-4088-8971-769aa517fac1",
+                     to:"https://cps.seajal.org/convocatoria-buenas-practicas-municipales-2026"
+
+                },
                  {
                     src:"https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2FQjXLjUOpI86yFY7FTrPn%2FBanners%20p%C3%A1gina%20web%20(9).png?alt=media&token=5a787a8d-4754-463b-ab1e-92d6f0d093d8",
                     to:"https://documents.un.org/doc/undoc/ltd/g25/102/74/pdf/g2510274.pdf"
