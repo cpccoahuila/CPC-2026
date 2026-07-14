@@ -13,26 +13,49 @@
                         <v-col cols="12" md="4" v-for="(i, index) in integrantes" :key="index">
                             <v-card elevation="3" class="mx-auto mt-4 overflow-visible" rounded="xl" min-height="320">
 
-                                <v-dialog max-width="400">
+                                <v-dialog v-model="dialog[index]" max-width="1000">
                                     <template v-slot:activator="{ props }">
                                         <v-btn v-bind="props" icon="mdi-plus" :color="page.color" position="absolute"
                                             location="top right" class="mt-n4 mr-n2" elevation="4"></v-btn>
                                     </template>
+                                    
 
-                                    <v-card rounded="lg">
-                                        <v-card-title class="bg-grey-lighten-3 d-flex align-center">
-                                            <v-icon class="mr-2">mdi-email-outline</v-icon> Contacto
-                                        </v-card-title>
-                                        <v-card-text class="pa-6 text-center">
+                                    <v-card rounded="xl">
+                                        
+                                        <div class="text-center text-subtitle-1 mb-2 font-weight-bold">{{ i.nombre }}</div>
+                                            
+                                        <!--<v-card-title class="bg-grey-lighten-3 d-flex align-center">
+                                            <v-icon class="mr-2">mdi-email-outline</v-icon> Curriculum
+                                        </v-card-title>-->
+                                         <v-divider></v-divider>
+                                        <div v-for="(e, index) in i.curriculum" :key="index">
+                                            <v-card-title class="bluegreyt">
+                                                {{ e.subtitulo }}
+                                            </v-card-title>
+
+                                            <v-card-text>
+                                                
+                                                <v-list>
+                                                    <v-list-item v-for="(item, i) in e.lista" :key="i" dense>
+                                                        <v-icon>mdi-checkbox-multiple-blank-circle-outline</v-icon> {{ item }}
+                                                    </v-list-item>
+                                                </v-list>
+                                                 
+
+                                            </v-card-text>
+                                        </div>
+
+                                        <v-divider></v-divider>
+                                        <!--<v-card-text class="pa-6 text-center">
                                             <div class="text-subtitle-1 mb-2 font-weight-bold">{{ i.nombre }}</div>
                                             <v-chip color="primary" variant="tonal" prepend-icon="mdi-email">
                                                 {{ i.mail }}
                                             </v-chip>
-                                        </v-card-text>
+                                        </v-card-text>-->
                                         <v-divider></v-divider>
                                         <v-card-actions>
                                             <v-spacer></v-spacer>
-                                            <v-btn variant="text" @click="null">Cerrar</v-btn>
+                                            <v-btn variant="text" @click="dialog[index] = false">Cerrar</v-btn>
                                         </v-card-actions>
                                     </v-card>
                                 </v-dialog>
@@ -123,6 +146,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
 // En Nuxt 3/4 usamos <script setup> por estándar
 const page = {
     color: 'purple',
@@ -146,28 +171,121 @@ const integrantes = [
         cargo: 'Consejero Presidente ',
         foto: 'cpc-jcge.jpg',
         img: 'cc-cpc.png',
-        mail: 'carlos.guzman@cpccoahuila.org.mx'
+        mail: 'carlos.guzman@cpccoahuila.org.mx',
+        curriculum: [{
+                subtitulo: 'Formación Académica',
+                lista: [
+                    'Obtuvo el título de contador público auditor por la Universidad Metropolitana de Coahuila.',
+                    'Cursó la maestría en planeación con acentuación en formulación y evaluación de proyectos por la Facultad de Economía de la Universidad Autónoma de Coahuila.',
+                    'Además, cursó la especialidad en Derecho a la Información, Fiscalización y Combate a la Corrupción en la Academia Interamericana de Derechos Humanos de la Universidad Autónoma de Coahuila'
+                ]
+            },
+            {
+                subtitulo: 'Experiencia Profesional',
+                lista: [
+                    'El Maestro Guzmán se ha desempeñado tanto en el sector público como en el privado.',
+                    'Contralor, subgerente de control y subgerente de servicios en varias sucursales del Banco Nacional de México.',
+                    'Director de la Unidad Catastral del municipio de Acuña en dos administraciones.',
+                    'Gerente y conductor de programas en reconocida estación de radio en Acuña, Coah.',
+                    'Propietario de Guzmán Despacho Contable en Acuña, Coahuila.',
+                    'Subdirector de Finanzas de los Servicios de Salud de Coahuila.',
+                    'Director de administración de la Academia Interamericana de Derechos Humanos de la UAdeC.',
+                    'Director General de Administración del Tribunal Electoral de Coahuila.',
+                    'A partir de octubre del 2021 se desempeña como consejero de Participación Ciudadana del Sistema Anticorrupción del estado de Coahuila.'
+                
+                ]
+            }
+        ]
     },
     {
         nombre: 'Karla Ivonne Natividad González',
         cargo: 'Consejera',
         foto: 'cpc-king.png',
         img: 'cc-cpc.png',
-        mail: 'karla.natividad@cpccoahuila.org.mx'
+        mail: 'karla.natividad@cpccoahuila.org.mx',
+        curriculum: [{
+                subtitulo: 'Formación Académica',
+                lista: [
+                    'Egresada de la carrera de Comercio Internacional por el ITESM Campus Saltillo y tiene una maestría en Administración Pública. Su negocio se llama Blwms, y tiene más de 15 años dirigiendola.',
+                    
+                ]
+            },
+            {
+                subtitulo: 'Experiencia Profesional',
+                lista: [
+                    'Obtuvo el primer lugar del Premio Estatal de la Juventud y en 2014 el primer lugar del Premio Municipal de la Juventud, ambos en logro emprendedor.',
+                    'Presidió la Comisión de Mujeres Empresarias de Coparmex Coahuila Sureste, espacio para fortalecer a la mujer empresaria y poder brindarle herramientas para su crecimiento.',
+                    'Fue seleccionada para participar en la Exposición “Ellas Hacen Historia”, iniciativa del Senado de la República en conjunto con Facebook México e Instagram, donde se expuso la historia de 10 emprendedoras y de esta forma inspirar a más mujeres a emprender.',
+                    'Formó parte del Consejo de la Asociación de Exatec.',
+                    'Es cofundadora de Kaena, Mujeres con Valor, AC una asociación sin fines de lucro para buscar el crecimiento y desarrollo no solo personal sino profesional de todas las mujeres.',
+                    'Participó en el proceso electoral 2023-2024, como Consejera Electoral Propietaria del 08 Consejo Distrital del Instituto Nacional Electoral en el Estado de Coahuila.',
+                    'Actualmente es Vicepresidenta de Coparmex Coahuila Sureste, y forma parte del Consejo de la Comisión de Mujeres Empresarias y de la Comisión de Desarrollo Democrático, ambas de Coparmex.',
+                    'En Marzo de este año obtuvo el nombramiento como Consejera del Consejo de Participación Ciudadana del Sistema Estatal Anticorrupcion, donde busca lograr el involucramiento de la sociedad en practicas comunes que coadyuven a la disminución de la desconfianza ciudadana en el sector publico y privado.'
+                
+                ]
+            }
+        ]
     },
     {
         nombre: 'Carlos Antonio Franco Flores',
         cargo: 'Consejero',
         foto: 'cpc-caff.png',
         img: 'cc-cpc.png',
-        mail: 'carlos.franco@cpccoahuila.org.mx'
+        mail: 'carlos.franco@cpccoahuila.org.mx',
+        curriculum: [{
+                subtitulo: 'Formación Académica',
+                lista: [
+                    'Licenciado en Derecho por el Tecnológico de Monterrey, campus Monterrrey (2003), cuenta con un Master en Ciencias Jurídicas otorgado por la Universidad Pompeu Fabra de Barcelona, España (2009). ',
+                    'Especialista en Derecho a la Información, Fiscalización y Combate a la Corrupción grado obtenido con mención honorífica por la Academia Interamericana de Derechos Humanos, Saltillo, Coahuila.',
+                    
+                ]
+            },
+            {
+                subtitulo: 'Experiencia Profesional',
+                lista: [
+                    'Consejero de Participación Ciudadana del Sistema Estatal Anticorrupción del Estado de Coahuila de Zaragoza.',
+                    'Ha colaborado en las áreas jurídicas de los Gobiernos Estatal de Coahuila y del Municipal de Saltillo, en las áreas de litigio constitucional, asuntos legislativos y regulación, así como consultoría externa',
+                    'Asesor Parlamentario en las LXI y LXV Legislaturas de la Cámara de Diputados participando en las comisiones de Derechos Humanos, Presupuesto y Cuenta Pública, Transparencia y LXII, LXIII Legislaturas en la Cámara de Senadores en las comisiones de Atención a Grupos Vulnerables, Salud, Turismo, así como Mesa Directiva.',
+                    'Se desempeñó como Subdirector de Ponencia en el Instituto Nacional de Transparencia y Acceso a la Información Pública y Protección de Datos Personales. Director General del Instituto Coahuilense de Acceso a la Información Pública.',
+                    'En el sector privado formó parte de Estrategia Pública Consultores S.C. en la Ciudad de México en las áreas de infraestructura, energía y turismo. Es socio fundador de PALS Consultores S.C., consultoría especializada en el diseño de políticas públicas, asesoría legislativa, regulación y cumplimiento.',
+                    
+                
+                ]
+            }
+        ]
     },
     {
         nombre: 'Diana Marisol Flores Rivera',
         cargo: 'Consejera',
         foto: 'cpc-dmfr.png',
         img: 'cc-cpc.png',
-        mail: 'diana.flores@cpccoahuila.org.mx'
+        mail: 'diana.flores@cpccoahuila.org.mx',
+        curriculum: [{
+                subtitulo: 'Formación Académica',
+                lista: [
+                    'Licenciada en Derecho, egresada de la Facultad de Jurisprudencia de la Universidad Autónoma de Coahuila, (2004) cuenta con una maestría en Derecho con acentuación en Sistema Penal Acusatorio cursada en la Facultad de Jurisprudencia (2015), además de una Especialidad en Psicología y Género en la Procuración de Justicia impartida por la UNAM y la FEVIM (2008); Docente Certificada por la Secretaría Técnica del Consejo de Coordinación para la Implementación del Sistema de Justicia Penal (SETEC) de la Secretaría de Gobernación (2017).',
+                    'Ha participado en diversos Diplomados y talleres prácticos sobre Juicios Orales, Mediación Penal, Negociación, Justicia Restaurativa, Derechos Humanos, Transparencia y Enfoque de los Derechos de la Infancia. (2007 a la fecha).',
+                    'Ha asistido a congresos nacionales e internacionales sobre Mediación y Justicia Juvenil Restaurativa en diversos estados de la Republica y países de Latinoamérica, donde ha participado en entrenamientos de reuniones restaurativas, además en seminarios de Juicios Orales y del Sistema de Justicia Penal Acusatorio. (2009- 2020).',
+                ]
+            },
+            {
+                subtitulo: 'Experiencia Profesional',
+                lista: [
+                    'Catedrática de la materia de Medios Alternos de Solución de Conflictos en la carrera de Licenciatura en Derecho en la Universidad Americana del Noreste Campus Saltillo (2009- 2012) e  instructora en la impartición de distintos talleres y cursos sobre Mediación Penal, Justicia Restaurativa y Cultura de la Legalidad dirigidos a Ministerios Públicos, Policías Estatales y Municipales, Estudiantes de Derecho, integrantes de Foros y Barras de Abogados, universitarios y padres de familia, entre otros, en las distintas regiones del Estado. (2009- 2020).',
+                    'Ponente en Mesas de Trabajo y Foros de Mediación en Congresos Nacionales en la ciudad de México y en distintos Estados de la República como Oaxaca, Nuevo León y Baja California, así como en el Seminario de Buenas Prácticas de Justicia Restaurativa dirigido a Magistrados, Jueces y Fiscales de la ciudad de Bogotá, Colombia (2010- 2020).',
+                    'Participó con propuestas de cambio a la Iniciativa de Ley Nacional de Mecanismos Alternativos de Solución de Controversias en el Senado de la Republica que hoy se encuentra vigente. (2014)',
+                    'Disertante en la Casa de la Cultura Jurídica de la Suprema Corte de Justicia de la Nación en las ciudades de Saltillo y Torreón. (2012- 2018)',
+                    'Directora del Programa Cultura de la Legalidad implementado en el Estado de Coahuila por el National Strategy Information Center de Washington D.C. (2009- 2013)',
+                    'Miembro del Colegio de Mediadores de Coahuila A.C., miembro de la Mesa Directiva en la Asociación de Abogados del Estado de Coahuila e integrante del Capitulo Coahuila de la Asociación de Resolución de Conflictos, A.C. (ARCO). (2012 a la fecha)',
+                    'Encargada de crear, implementar, supervisar y dirigir el Órgano de Mecanismos Alternativos de Solución de Controversias en Materia Penal en sede ministerial en el Estado de Coahuila. (2009- 2018)',
+                    'Desde el ámbito privado, se desempeñó como Facilitadora de Dialogo entre Autoridades de los tres niveles de gobierno, servidores públicos y miembros de los distintos Colectivos de Familias de Personas Desaparecidas en el Estado de Coahuila, con el fin de crear una nueva ley orgánica y llevar a cabo la revisión de casos específicos, dentro de la Consultoría en Derecho, conformada por la Mtra. Susana Camacho Maciel y el Mtro. Omar Gómez Trejo de la Ciudad de México, así como por el Dr. Miguel Ángel Urbina Martínez de Guatemala. (2022- 2024)',
+                    'Consultora Independiente en Derecho Penal y Asesora para el desarrollo de Proyectos de Resoluciones Administrativas por faltas cometidas por servidores públicos en la Fiscalía General del Estado de Coahuila. (2024 – 2025)',
+                    'Actualmente se desempeña como Consejera del Consejo de Participación Ciudadana (CPC) del Sistema Estatal Anticorrupción del Estado de Coahuila de Zaragoza, habiendo sido seleccionada recientemente para el cargo de cinco años, siendo la primera Consejera seleccionada por unanimidad por parte del Comité de Selección, desde la existencia del Sistema Estatal. (Marzo de 2025 a la fecha)',
+
+                
+                ]
+            }
+        ]
     },
      {
         nombre: 'José Ignacio Carrillo Aguirre',
@@ -177,6 +295,8 @@ const integrantes = [
         mail: 'ignacio.carrillo@cpccoahuila.org.mx'
     }
 ];
+
+const dialog = ref(integrantes.map(() => false))
 
 const Valores = [
     {
