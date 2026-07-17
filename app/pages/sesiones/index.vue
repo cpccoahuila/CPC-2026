@@ -145,10 +145,40 @@ const sesiones = [
   {
     year: 'Sesiones Ordinarias 2026',
     data: [
+     {
+        link: 'https://youtu.be/ottOsbLeRUs?si=KP92PZorBl6rrUUM',
+        nombre: 'Décima Sesión Ordinaria - Julio ',
+        ordenDelDia: 'https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2F1GRNxfq5u5AuZkCpGYTU%2FOrden%20del%20d%C3%ADa%20sesi%C3%B3n%2010.pdf?alt=media&token=ababae39-0752-4ae8-83fd-7255f3092302'
+      },
+     {
+        link: 'https://youtu.be/npi6-hwMGT8?si=iPdjPLpFKL8z4dG4',
+        nombre: 'Novena Sesión Ordinaria - Junio ',
+        ordenDelDia: 'https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2F1GRNxfq5u5AuZkCpGYTU%2FOrden%20del%20d%C3%ADa%20sesi%C3%B3n%209.pdf?alt=media&token=c00e5dd0-7b9c-4170-bbf9-2970887af555'
+      },
+     {
+        link: 'https://youtu.be/nfAZibX_x7M?si=cbWYxs55Su1LIA5h',
+        nombre: 'Octava Sesión Ordinaria - Mayo ',
+        ordenDelDia: 'https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2F1GRNxfq5u5AuZkCpGYTU%2FOrden%20del%20d%C3%ADa%20sesi%C3%B3n%208.pdf?alt=media&token=40c3c297-1922-42ae-b32c-0e91a74a6d27'
+      },
+     {
+        link: 'https://youtu.be/La9T8KjK674?si=e5E-P1bA_FuIjDgY',
+        nombre: 'Séptima Sesión Ordinaria - Abril ',
+        ordenDelDia: 'https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2F1GRNxfq5u5AuZkCpGYTU%2FOrden%20del%20d%C3%ADa%20sesi%C3%B3n%207.pdf?alt=media&token=ac9bedce-72ca-425b-985c-2b006a38023a'
+      },
+     {
+        link: 'https://youtu.be/iAUwGVWzRus?si=2wHFsnnu7uFxlIrT',
+        nombre: 'Sexta Sesión Ordinaria - Marzo ',
+        ordenDelDia: 'https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2F1GRNxfq5u5AuZkCpGYTU%2FOrden%20del%20d%C3%ADa%20sesi%C3%B3n%206.pdf?alt=media&token=3a2427d7-0bfd-49a6-a706-022fad82568e'
+      },
+     {
+        link: 'https://youtu.be/OFnZ_gcJvMs?si=hs2qnBTlWY5W8IUG',
+        nombre: 'Quinta Sesión Ordinaria - Febrero ',
+        ordenDelDia: 'https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2F1GRNxfq5u5AuZkCpGYTU%2FOrden%20del%20d%C3%ADa%20sesion%204.pdf?alt=media&token=122c69dd-2bda-4ed1-8132-85734639f5b5'
+      },
       {
         link: 'https://youtu.be/0KUFWMmSNso',
-        nombre: 'Cuarta Sesión Ordinaria ',
-        ordenDelDia: '/sesiones'
+        nombre: 'Cuarta Sesión Ordinaria - Enero ',
+        ordenDelDia: 'https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2F1GRNxfq5u5AuZkCpGYTU%2FOrden%20del%20d%C3%ADa%20sesion%204.pdf?alt=media&token=122c69dd-2bda-4ed1-8132-85734639f5b5'
       },
 
 
@@ -162,13 +192,13 @@ const sesiones = [
     data: [
 {
         link: 'https://youtu.be/4lwUS0AmEsY',
-        nombre: 'Tercera Sesión Ordinaria',
-        ordenDelDia: '/sesiones'
+        nombre: 'Tercera Sesión Ordinaria - Diciembre',
+        ordenDelDia: 'https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2F1GRNxfq5u5AuZkCpGYTU%2FOrden%20del%20d%C3%ADa%20sesi%C3%B3n%203.pdf?alt=media&token=6a8c3684-acf0-4686-bcaa-33ef3dd6abfb'
       },
       {
         link: 'https://youtu.be/e_iho7JHwMg',
-        nombre: 'Segunda Sesión Ordinaria',
-        ordenDelDia: '/sesiones'
+        nombre: 'Segunda Sesión Ordinaria - Noviembre',
+        ordenDelDia: 'https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2F1GRNxfq5u5AuZkCpGYTU%2FOrden%20del%20d%C3%ADa%20sesi%C3%B3n%202.pdf?alt=media&token=e041da53-9b99-405b-ba20-4be935ae408c'
       },
       {
         link: 'https://youtu.be/LArRngWTpec',
@@ -177,8 +207,8 @@ const sesiones = [
       },
        {
         link: 'https://youtu.be/uW_GIUDTo60',
-        nombre: 'Primera Sesión Ordinaria',
-        ordenDelDia: '/sesiones'
+        nombre: 'Primera Sesión Ordinaria - Octubre',
+        ordenDelDia: 'https://firebasestorage.googleapis.com/v0/b/transparenciaseac.appspot.com/o/I7kmevbBVPO8yR9G0mK9%2F1GRNxfq5u5AuZkCpGYTU%2FOrden%20del%20d%C3%ADa%20sesi%C3%B3n%201.pdf?alt=media&token=a09f22f3-6f52-48b7-a5e9-9e80133875db'
       },
       {
         link: 'https://youtu.be/mx-jaOLYvoE',

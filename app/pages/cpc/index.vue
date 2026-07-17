@@ -116,7 +116,7 @@
                     </v-row>
                 </v-card>
 
-                <v-card class="mt-10 pa-8 bg-grey-lighten-4" rounded="xl">
+                <!----<v-card class="mt-10 pa-8 bg-grey-lighten-4" rounded="xl">
                     <v-row>
                         <v-col cols="12" md="6" class="text-center">
                             <div class="text-h5 mb-4">Planes</div>
@@ -138,7 +138,7 @@
                             </div>
                         </v-col>
                     </v-row>
-                </v-card>
+                </v-card>-->
 
             </v-col>
         </v-row>
@@ -341,53 +341,53 @@ const Valores = [
     },
 ];
 
-const informes = [
-    {
-        year: '2021-2022',
-        src: 'cpc-coahuila-informe-resultados-2021-2022.pdf'
-    },
-    {
-        year: '2020-2021',
-        src: 'cpc-coahuila-informe-resultados-2020-2021.pdf'
-    },
-    {
-        year: '2019-2020',
-        src: 'cpc-coahuila-informe-resultados-2019-2020.pdf'
-    },
-    {
-        year: '2018-2019',
-        src: 'cpc-coahuila-informe-resultados-2018-2019.pdf'
-    },
+//const informes = [
+//    {
+//        year: '2021-2022',
+//        src: 'cpc-coahuila-informe-resultados-2021-2022.pdf'
+//    },
+//    {
+//        year: '2020-2021',
+//        src: 'cpc-coahuila-informe-resultados-2020-2021.pdf'
+//    },
+//    {
+//        year: '2019-2020',
+//        src: 'cpc-coahuila-informe-resultados-2019-2020.pdf'
+//    },
+//    {
+//        year: '2018-2019',
+//        src: 'cpc-coahuila-informe-resultados-2018-2019.pdf'
+//    },
 
-];
+//];
 
-const planes = [
-    {
-        year: 'Plan de Comunicación',
-        src: 'plan-de-comunicacion-cpc.pdf'
-    },
-    {
-        year: '2023',
-        src: 'programa-anual-cpc-23.pdf'
-    },
-    {
-        year: '2022',
-        src: 'programa-anual-cpc-22.pdf'
-    },
-    {
-        year: '2020',
-        src: 'plan-de-trabajo-cpc-2020.pdf'
-    },
-    {
-        year: '2019',
-        src: 'plan-de-trabajo-cpc-2019.pdf'
-    },
-    {
-        year: '2018',
-        src: 'plan-de-trabajo-cpc-2018.pdf'
-    },
+//const planes = [
+//    {
+//        year: 'Plan de Comunicación',
+//        src: 'plan-de-comunicacion-cpc.pdf'
+//    },
+//    {
+//        year: '2023',
+//        src: 'programa-anual-cpc-23.pdf'
+//    },
+//    {
+//        year: '2022',
+//        src: 'programa-anual-cpc-22.pdf'
+//    },
+//    {
+//        year: '2020',
+//        src: 'plan-de-trabajo-cpc-2020.pdf'
+//    },
+//    {
+//        year: '2019',
+//        src: 'plan-de-trabajo-cpc-2019.pdf'
+//    },
+//    {
+//        year: '2018',
+//        src: 'plan-de-trabajo-cpc-2018.pdf'
+//    },
 
-];
+//];
 </script>
 
 <style scoped>

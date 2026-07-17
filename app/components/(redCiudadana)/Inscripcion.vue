@@ -18,12 +18,7 @@
                 <v-btn color="pink" variant="flat" :href="`/cpc/${cronograma}`" rounded="pill">Ver Cronograma</v-btn>
               </v-col> -->
 
-              <v-col cols="12" md="4">
-                <v-icon color="pink" size="40">mdi-bullhorn-variant-outline</v-icon>
-                <p class="text-h6 mt-2">Convocatoria</p>
-                <p class="text-body-2 mb-4">¡Únete al esfuerzo por un Coahuila más transparente!</p>
-                <v-btn color="pink" variant="flat" :href="`/cpc/${convocatoria}`" rounded="pill">Descargar</v-btn>
-              </v-col>
+             
 
               <v-col cols="12" md="4">
                 <v-icon color="pink" size="40">mdi-file-check-outline</v-icon>
@@ -31,6 +26,14 @@
                 <p class="text-body-2 mb-4">Bases estratégicas establecidas por el primer grupo de integrantes.</p>
                 <v-btn color="pink" variant="flat" :href="`/cpc/${lineamientos}`" rounded="pill">Leer más</v-btn>
               </v-col>
+
+               <v-col cols="12" md="4">
+                <v-icon color="pink" size="40">mdi-bullhorn-variant-outline</v-icon>
+                <p class="text-h6 mt-2">Sesiones de la Red de Participación Ciudadana</p>
+                <p class="text-body-2 mb-4">Consulta las actas de las sesiones de la Red de Participación Ciudadana.</p>
+                <v-btn color="pink" variant="flat" :href="`/redCiudadana/rpc`" rounded="pill">Ver más</v-btn>
+              </v-col>
+
             </v-row>
           </v-card-text>
 
