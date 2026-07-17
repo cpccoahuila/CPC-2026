@@ -65,30 +65,20 @@ const page = {
 };
 
 const indicadores = [
-  {
-    titulo: "Corporación Latinobarómetro, Informe 2023",
-    texto: "Estudio de opinión pública que aplica anualmente alrededor de 20.000 entrevistas en 18 países de América Latina.",
-    link: "Ver",
-    documento: "/latinobarometro-informe-2023.pdf"
-  },
+ 
   {
     titulo: "Transparencia Internacional",
     texto: "Índice de Percepción de la Corrupción y niveles de integridad en el sector público.",
     link: "Ver",
-    documento: "/transparencia-internacional.pdf"
+    documento: "/transinter-2025.pdf"
   },
   {
-    titulo: "Coahuila ENVIPE 2023",
+    titulo: "Coahuila ENCIG 2025",
     texto: "Encuesta Nacional de Victimización y Percepción sobre Seguridad Pública (INEGI).",
     link: "Ver",
-    documento: "/coahuila-envipe-2023.pdf"
+    documento: "/encig-2025.pdf"
   },
-  {
-    titulo: "IMCO 2023",
-    texto: "Índice de Competitividad Estatal: análisis de la capacidad de las entidades para generar talento e inversión.",
-    link: "Ver",
-    documento: "/imco-2023.pdf"
-  }
+  
 ];
 </script>
 

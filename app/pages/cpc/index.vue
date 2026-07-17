@@ -292,7 +292,30 @@ const integrantes = [
         cargo: 'Consejero',
         foto: 'cpc-jica.png',
         img: 'cc-cpc.png',
-        mail: 'ignacio.carrillo@cpccoahuila.org.mx'
+        mail: 'ignacio.carrillo@cpccoahuila.org.mx',
+        curriculum: [{
+                subtitulo: 'Formación Académica',
+                lista: [
+                    'Licenciado en Economía por Facultade de Economía en la Universidad Autónoma de Coahuila.',
+                    
+                ]
+            },
+            {
+                subtitulo: 'Experiencia Profesional',
+                lista: [
+                    'Fue Director de Programas Asistenciales en el Dif Coahuila por 2 años, Subdirector de Modernización Administrativa en la Secretaria de la Contraloría y Modernización Administrativa de Coahuila por 2 años, posterior mente fue Director General de Evaluación y Seguimiento de Ingresos durante 4 años, así como Director General de Evaluación y Seguimiento de Egresos por 3 años en la Secretaria de Finanzas, también Director Ejecutivo de Administración en el Instituto Electora y de Participación Ciudadana de Coahuila durante 3 años, fue Director de Fiscalización a Partidos Políticos durante 5 así como Titular del Órgano Interno de control durante 7 años en el Instituto Estatal Electoral y de Participación ciudadana de Nuevo León.',
+                    'Ha sido catedrático en diversas materias relacionadas a la Economía, finanzas y contabilidad en diversas universidades como lo son: Universidad del Valle de México, Universidad Autónoma del Noreste, Instituto Tecnológico de Saltillo, Facultad de Economía.',
+                    'En la sociedad Civil ha participado como:',
+                    'Secretario General y Tesorero en el Comité de Vinos de Coahuila. 2023 a la fecha.',
+                    'Presidente de la Asociación Nacional de Contraloras y Contralores de México, A.C.  (ANCCIEM). 2023 – 2024.',
+                    'Vicepresidente de la Asociación Nacional de Contraloras y Contralores de México, A.C. (ANCCIEM).  2022 – 2023.',
+                    'Vicepresidente del Instituto Mexicano de Ejecutivos de Finanzas Coahuila. (IMEF). 2011- 2012.',
+                    'Vocal del Instituto Mexicano de Ejecutivos de Finanzas Coahuila.  (IMEF). 2009- 2011.',
+                    'Secretario General del Colegio de Economistas de Coahuila A. C.  2007 – 2013.',
+                    'Actualmente se Desempeña como Consejero de Participación Ciudadana en el Sistema Estatal Anticorrupción.',
+                ]
+            }
+        ]
     }
 ];
 
