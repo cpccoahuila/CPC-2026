@@ -50,7 +50,7 @@ const comunicados = [
 
   {
     titulo: "33. Comunicado SEPTIEMBRE 2026 - HUB KYBERNUS.pdf",
-    texto: "Comunicado 32.",
+    texto: "Comunicado 33.",
     link: "Ver comunicado",
     to: "https://drive.google.com/file/d/1OUVDh64XmDUSL4wz1-yO0BcAQxSVO8zX/view?usp=drive_link"
   },
