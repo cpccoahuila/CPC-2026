@@ -1,0 +1,1 @@
+import{X as e,dt as t,lt as n}from"./i8limGFQ.js";import{M as r}from"./Vc493Jgf.js";var i=r({eager:Boolean},`lazy`);function a(r,i){let a=n(!1),o=t(()=>a.value||r.eager||i.value);e(i,()=>a.value=!0);function s(){r.eager||(a.value=!1)}return{isBooted:a,hasContent:o,onAfterLeave:s}}export{a as n,i as t};

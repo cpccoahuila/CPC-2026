@@ -1,0 +1,1 @@
+import{X as e}from"./BEzrdLb_.js";var t=e(`v-spacer`,`div`,`VSpacer`);export{t};
