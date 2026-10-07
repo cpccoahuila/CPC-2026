@@ -166,40 +166,10 @@ const page = {
 };
 
 const integrantes = [
-    {
-        nombre: 'Juan Carlos Guzmán Escobedo',
-        cargo: 'Consejero Presidente ',
-        foto: 'cpc-jcge.jpg',
-        img: 'cc-cpc.png',
-        mail: 'carlos.guzman@cpccoahuila.org.mx',
-        curriculum: [{
-                subtitulo: 'Formación Académica',
-                lista: [
-                    'Obtuvo el título de contador público auditor por la Universidad Metropolitana de Coahuila.',
-                    'Cursó la maestría en planeación con acentuación en formulación y evaluación de proyectos por la Facultad de Economía de la Universidad Autónoma de Coahuila.',
-                    'Además, cursó la especialidad en Derecho a la Información, Fiscalización y Combate a la Corrupción en la Academia Interamericana de Derechos Humanos de la Universidad Autónoma de Coahuila'
-                ]
-            },
-            {
-                subtitulo: 'Experiencia Profesional',
-                lista: [
-                    'El Maestro Guzmán se ha desempeñado tanto en el sector público como en el privado.',
-                    'Contralor, subgerente de control y subgerente de servicios en varias sucursales del Banco Nacional de México.',
-                    'Director de la Unidad Catastral del municipio de Acuña en dos administraciones.',
-                    'Gerente y conductor de programas en reconocida estación de radio en Acuña, Coah.',
-                    'Propietario de Guzmán Despacho Contable en Acuña, Coahuila.',
-                    'Subdirector de Finanzas de los Servicios de Salud de Coahuila.',
-                    'Director de administración de la Academia Interamericana de Derechos Humanos de la UAdeC.',
-                    'Director General de Administración del Tribunal Electoral de Coahuila.',
-                    'A partir de octubre del 2021 se desempeña como consejero de Participación Ciudadana del Sistema Anticorrupción del estado de Coahuila.'
-                
-                ]
-            }
-        ]
-    },
+   
     {
         nombre: 'Karla Ivonne Natividad González',
-        cargo: 'Consejera',
+        cargo: 'Consejera Presidenta',
         foto: 'cpc-king.png',
         img: 'cc-cpc.png',
         mail: 'karla.natividad@cpccoahuila.org.mx',

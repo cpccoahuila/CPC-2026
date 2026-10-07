@@ -25,15 +25,7 @@ import { TitlePages } from '../../../.nuxt/components';
                                     :key="index"> {{ i }}</div>
                                
 
-                                <div class="media mb-4">
-                                    <div class="w-25 mr-2">
-                                    </div>
-                                    <div class="media-body align-self-end">
-                                        <h5 class="mt-0">Juan Carlos Guzmán Escobedo</h5>
-                                        <a
-                                            href="mailto:carlos.guzman@cpccoahuila.org.mx">carlos.guzman@cpccoahuila.org.mx</a>
-                                    </div>
-                                </div>
+                                
 
                                 <div class="media mb-4">
                                     <div class="w-25 mr-2">
